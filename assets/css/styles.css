@@ -1,0 +1,33 @@
+body { margin: 0px;}
+h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
+
+.logo { grid-area: logo; padding: 30px 40px; }
+.logo img { width: 100%; }
+.menu { grid-area: menu; padding: 30px 20px;}
+.menu svg { fill: white; }
+
+.slogan-container { grid-area: slogan; display: table; color: white; font-size: 42px; display: table; height: 100%;}
+.slogan-container .content {display: table-cell; vertical-align: middle; text-align: center; }
+.slogan-container .content h1 { color: white; text-align: center; font-size: 2em; font-weight: 500; margin: 0px; }
+.slogan-container .content p {     
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0px 0px 40px 40px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    float: left;
+    width: 70%;
+}
+
+.button { grid-area: button; padding: 30px 40px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 12fr 3fr;
+    grid-template-rows: 2fr 12fr 2fr;
+    grid-template-areas: 'logo . menu' '. slogan .' '. button .';
+    padding: 0px;
+    height: 100vh;
+    background-image: url('../img/bg-manta.jpg');
+}
