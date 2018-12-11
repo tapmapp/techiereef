@@ -20,26 +20,8 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 .menu { grid-area: menu; place-self:end end;padding:0 0 4rem 0s;}
 .menu svg { fill: white; max-width: 150px; min-width: 100px;}
 
-#hero-grid {
-    display: grid;
-    grid-column-gap: 0;
-	grid-row-gap: 0;
-    grid-template-columns: 3fr 8fr 3fr;
-    grid-template-rows: 100px 1fr 1fr;
-    grid-template-areas: 
-					    'logo . menu' 
-					    '. slogan .' 
-					    '. button .';
-    padding: 0px;
-    height: 100vh;
-    background-image: url('../img/bg-manta.jpg');
-    background-size:cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-}
-
-#hero-grid .slogan-container { grid-area: slogan; padding: 0 0 1em 0; place-self:end center; height: auto;}
-#hero-grid .slogan-container h1 { color: white; text-align: center; font-size: 5rem; font-weight: 300; }
+.slogan-container { grid-area: slogan; padding: 0 0 1em 0; place-self:end center; height: auto;}
+.slogan-container h1 { color: white; text-align: center; font-size: 5rem; font-weight: 300; }
 .button .content p {     
     font-family: 'Ubuntu', sans-serif;
     padding: 0px 0px 40px 40px;
@@ -52,6 +34,24 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 }
 
 .button { grid-area: button; padding: 30px 40px; }
+
+.grid-container {
+    display: grid;
+     grid-column-gap: 0;
+	 grid-row-gap: 0;
+    grid-template-columns: 3fr 8fr 3fr;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: 
+					    'logo . menu' 
+					    '. slogan .' 
+					    '. button .';
+    padding: 0px;
+    height: 100vh;
+    background-image: url('/wp-content/themes/techiereef/uploads/bg-manta.jpg');
+    background-size:cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
 
 .portfolio{
 	grid-area: portfolio;
@@ -78,7 +78,7 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 		background: #ddd;
 }
 
-#menu-grid {
+#menu-grid{
 	z-index:1;
 	top: 0;
 	left: -100%;
@@ -88,9 +88,9 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 	grid-template-areas: 
 					    "portfolio photo navigation"
 					    "video particles navigation";
-    height: 100vh;
+    height:100vh;
     position:absolute;
-    width: 100%;
+    width:100%;
 }
 
 #menu-grid.active{
@@ -106,17 +106,16 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
   }
  
   
-.hover-menu-color:hover { animation: col 0.3s ease 0s 1 normal both; }
-
+.hover-menu-color:hover {animation: col 0.3s ease 0s 1 normal both;}
 @keyframes col {
-	0% {fill:white}
-	100% {fill:black}
+0% {fill:white}
+100% {fill:black}
 }
   
 /* 320px */
 @media only screen and (min-width : 20em) {
 	
-#hero-grid {
+.grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 1fr 2fr;
     grid-template-areas: 
@@ -125,20 +124,20 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 					    'button button button';
 }
 
-#hero-grid .slogan-container {
+.slogan-container {
 	place-self:end center;
 	padding: 0 0 0 0;
 	height: auto;
 }
 
-#hero-grid .slogan-container h1 {
+.slogan-container h1 {
 	font-size: 2rem;
 	margin:0;
 }
 
 
 
-#menu-grid { 
+#menu-grid{
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows:    2fr 1fr 1fr;
 	grid-template-areas: 
