@@ -11,7 +11,7 @@
 	//$url = '/wp-content/themes/techiereef/';
 ?>
 <!DOCTYPE html>
-<html <?php //language_attributes(); ?> class="no-js">
+<html class="no-js">
 <head>
 	<meta name="google-site-verification" content="hx9xBRXoplTZvwaskvY-mHP0nQOPPnpLpPnkgJx5ONc" />
 	<title>TechieReef - Digital Strategies</title>
@@ -23,13 +23,13 @@
 	<![endif]-->
 
 	<?php //wp_head(); ?>
-	
+	<link rel='stylesheet' id='twentyseventeen-fonts-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%3A700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
 	<link rel='stylesheet' href="<?php $url ?>css/global_grid.css" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/particles.js"></script>
 </head>
 
-<body <?php //body_class(); ?>>
+<body>
 	
 
 <div class="grid-container">
