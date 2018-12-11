@@ -31,3 +31,56 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
     height: 100vh;
     background-image: url('../img/bg-manta.jpg');
 }
+
+/* MENU CSS */
+.portfolio{
+	grid-area: portfolio;
+	background: #111;
+}
+
+.video{
+	grid-area: video;
+		background: #444;
+}
+
+.photo{
+	grid-area: photo;
+		background: #777;
+}
+
+.particles{
+	grid-area: particles;
+		background: #AAA;
+}
+
+.navigation{
+	grid-area: navigation;
+		background: #ddd;
+}
+
+#menu-grid{
+	z-index:1;
+	top: 0;
+	left: -100%;
+	display: none;
+	grid-template-columns: 1fr 2fr 4fr;
+	grid-template-rows: 3fr 1fr;
+	grid-template-areas: 
+    "portfolio photo navigation"
+    "video particles navigation";
+    height:100vh;
+    position:absolute;
+    width:100%;
+}
+
+#menu-grid.active{
+	left: -100%;
+	display: grid;
+	-webkit-transition: left 500ms ease;
+    -moz-transition: left 500ms ease;
+    transition: left 500ms ease;
+}
+  
+  #menu-grid.move{
+	left: 0;
+  }
