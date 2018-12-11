@@ -47,7 +47,7 @@ h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 					    '. button .';
     padding: 0px;
     height: 100vh;
-    background-image: url('/wp-content/themes/techiereef/uploads/bg-manta.jpg');
+    background-image: url('../assets/images/bg-manta.jpg');
     background-size:cover;
     background-position: center top;
     background-repeat: no-repeat;
