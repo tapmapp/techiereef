@@ -72,25 +72,18 @@
 			jQuery('#icon-menu').click(function(){
 				openMenu();
 			});
-		});
-		
-		function openMenu(){
-			jQuery('#menu-grid').addClass('active');
-
-				setTimeout(
-					()=> {
-						jQuery('#menu-grid').addClass('move');
-		    			});
-		}
-	    
-	    
-	    
-	    jQuery(document).ready(function(){
 			jQuery('#icon-close').click(function(){
 				closeMenu();
 			});
 		});
 		
+		function openMenu(){
+			jQuery('#menu-grid').addClass('active');
+			setTimeout(()=> {
+				jQuery('#menu-grid').addClass('move');
+			});
+		}
+	    
 		function closeMenu(){
 			
 			jQuery('#menu-grid').removeClass('move');
@@ -101,8 +94,7 @@
 			}, 500);
 		}
 
-	    
-	   </script>
+	</script>
 			
 </body>
 </html>
