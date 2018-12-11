@@ -6,6 +6,9 @@
  * @subpackage techiereef
  * @since Twenty Fifteen 1.0
  */
+
+	$url = 'http://localhost/techiereef/';
+	//$url = '/wp-content/themes/techiereef/';
 ?>
 <!DOCTYPE html>
 <html <?php //language_attributes(); ?> class="no-js">
@@ -21,7 +24,7 @@
 
 	<?php //wp_head(); ?>
 	
-	<link rel='stylesheet' href="<?php dirname(__FILE__) ?>css/global_grid.css" type="text/css"/>
+	<link rel='stylesheet' href="<?php $url ?>css/global_grid.css" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/particles.js"></script>
 </head>
@@ -31,7 +34,7 @@
 
 <div class="grid-container">
   <div class="logo">
-    <img src="<?php dirname(__FILE__) ?>assets/images/techiereef-logo.png"/>
+    <img src="<?php $url ?>assets/images/techiereef-logo.png"/>
   </div>
   <div class="menu">
     <svg id="icon-menu" viewBox="0 0 119 25" width="100%" height="100%">
