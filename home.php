@@ -51,7 +51,7 @@
 	</div>
 </div>
 <?php include('includes/menu.php'); ?>
-	
+<?php include('includes/values.php'); ?>	
 <script>
 	jQuery(document).ready(function(){
 		jQuery('#icon-menu').click(function(){
@@ -77,7 +77,6 @@
 		}, 500);
 	}
 
-</script>
-			
+</script>			
 </body>
 </html>
