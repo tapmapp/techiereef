@@ -18,7 +18,8 @@ body{
 h1, h2, h3 { font-family: 'Ubuntu', sans-serif; }
 a { text-decoration: none; }
 ul { list-style: none; margin: 0px; padding: 0px; }
-/* HOME */
+
+/* HERO GRID */
 
 #hero-grid {
     display: grid;
