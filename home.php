@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<div id="home-grid">
+<div id="hero-grid">
 	<div class="logo">
 		<a href="/">
 			<img src="<?php $url ?>assets/images/techiereef-logo.png"/>
