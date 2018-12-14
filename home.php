@@ -23,7 +23,7 @@
 	<![endif]-->
 
 	<?php //wp_head(); ?>
-	<link rel='stylesheet'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%3A400%3A700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%3A400%3A700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
 	<link rel='stylesheet' href="<?php $url ?>css/global_grid.css" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/particles.js"></script>

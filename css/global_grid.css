@@ -153,32 +153,32 @@ ul { list-style: none; margin: 0px; padding: 0px; }
 
 .values-header{
 	grid-area:header;
-	background-attachment: blue;
+	background: blue;
 }
 
 .big-picture{
 	grid-area:bigpic;
-	background-attachment:#999;
+	background:#999;
 }
 
 .small-picture{
 	grid-area:smallpic;
-	background-attachment:black;
+	background:black;
 }
 
 .values-content{
 	grid-area:contentval;
-	background-attachment:#cecece;
+	background:#cecece;
 }
 
 .interaction{
 	grid-area:interaction;
-	background-attachment: #444444;
+	background: #444444;
 }
 
 .relleno{
 	grid-area:relleno;
-	background-attachment: #111;
+	background: #111;
 }
 
 /* END VALUES GRID */
