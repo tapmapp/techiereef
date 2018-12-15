@@ -102,7 +102,10 @@
 	</div>
 </div>
 <?php include('includes/menu.php'); ?>
-<?php include('includes/values.php'); ?>	
+<?php include('includes/values.php'); ?>
+<?php include('includes/portfolio_home.php'); ?>
+<?php include('includes/servicios_home.php'); ?>
+
 <script>
 
 	jQuery(document).ready(function(){
