@@ -97,7 +97,7 @@ ul { list-style: none; margin: 0px; padding: 0px; }
 	top: 0;
 	left: -100%;
 	display: none;
-	grid-template-columns: 1fr) 2fr 4fr;
+	grid-template-columns: 1fr 2fr 4fr;
 	grid-template-rows: 3fr 1fr;
 	grid-template-areas: 
 					    "portfolio photo navigation"
@@ -142,7 +142,7 @@ ul { list-style: none; margin: 0px; padding: 0px; }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-					    'values values-img'
+					    'values values-img';
     padding: 0px;
     height: 100vh;
 }
