@@ -9,6 +9,57 @@
 
 	$url = 'http://localhost/techiereef/';
 	//$url = '/wp-content/themes/techiereef/';
+
+	$values = [];
+
+	class Value
+	{
+		public $title;
+		public $description;
+		public $type;
+		public $sound;
+	}
+
+	$value = new Value();
+	$value->postId = 0;
+	$value->header = "do you have hope?";
+	$value->title = "hope";
+	$value->type = "noun";
+	$value->sound = "həʊp";
+	$value->description = '1. a feeling of expectation and desire for a particular thing to happen';
+
+	array_push($values, $value);
+
+	$value = new Value();
+	$value->postId = 1;
+	$value->header = "can you imagine?";
+	$value->title = "imagine";
+	$value->type = "noun";
+	$value->sound = "həʊp";
+	$value->description = '2. a feeling of expectation and desire for a particular thing to happen';
+
+	array_push($values, $value);
+
+	$value = new Value();
+	$value->postId = 2;
+	$value->header = "belief?";
+	$value->title = "belief";
+	$value->type = "noun";
+	$value->sound = "həʊp";
+	$value->description = '3. a feeling of expectation and desire for a particular thing to happen';
+
+	array_push($values, $value);
+
+	$value = new Value();
+	$value->postId = 3;
+	$value->header = "create";
+	$value->title = "create";
+	$value->type = "noun";
+	$value->sound = "həʊp";
+	$value->description = '4. a feeling of expectation and desire for a particular thing to happen';
+
+	array_push($values, $value);
+
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -53,13 +104,26 @@
 <?php include('includes/menu.php'); ?>
 <?php include('includes/values.php'); ?>	
 <script>
+
 	jQuery(document).ready(function(){
+
+		// CLICK EVENTS
 		jQuery('#icon-menu').click(function(){
 			openMenu();
 		});
+
 		jQuery('#icon-close').click(function(){
 			closeMenu();
 		});
+
+		jQuery('#open-values-menu').click(function(){
+			openValuesMenu();
+		});
+
+		jQuery('#close-values-menu').click(function(){
+			closeValuesMenu();
+		});
+
 	});
 	
 	function openMenu(){
@@ -70,12 +134,23 @@
 	}
 	
 	function closeMenu(){
-		
 		jQuery('#menu-grid').removeClass('move');
 			setTimeout(()=> {
 				jQuery('#menu-grid').removeClass('active');
 		}, 500);
 	}
+
+	function openValuesMenu(){
+		jQuery('.values-submenu').addClass('active');
+	}
+
+	function closeValuesMenu(){
+		jQuery('.values-submenu').removeClass('active');
+	}
+	<?php
+	$js_array = json_encode($values);
+	echo "var values = ". $js_array . ";\n";
+	?>
 
 </script>			
 </body>

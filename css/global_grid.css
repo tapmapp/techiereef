@@ -97,7 +97,7 @@ ul { list-style: none; margin: 0px; padding: 0px; }
 	top: 0;
 	left: -100%;
 	display: none;
-	grid-template-columns: 1fr) 2fr 4fr;
+	grid-template-columns: 1fr 2fr 4fr;
 	grid-template-rows: 3fr 1fr;
 	grid-template-areas: 
 					    "portfolio photo navigation"
@@ -142,20 +142,86 @@ ul { list-style: none; margin: 0px; padding: 0px; }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-					    'values values-img'
+					    'values values-img';
     padding: 0px;
     height: 100vh;
 }
 
-.values {
-	grid-area:header;
+#values-grid .values {
+	grid-area: values;
+    place-self: center start;
+    background: white;
+	width: 100%;
+	padding: 0 5rem 0 5rem;
+ }
+ 
+#values-grid .values h1 { font-size: 4rem; margin: 0px 0px 0px 0px; }
+#values-grid .values-navigation span { 
+	display: block;
+    font-size: 1rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid #000;
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    margin: 0px 20px 0px 0px;
+ }
+
+ #values-grid .values-img {
+	grid-area: values-img;
 	background: white;
+	position: relative;
 }
 
-.values-img {
-	grid-area:header;
-	background: white;
+#values-grid .values-submenu { 
+	color: white;
+    grid-area: values-submenu;
+    padding: 0rem 3rem 0 3rem;
+    bottom: 0%;
+    position: absolute;
+    height: 6rem;
+    background-color: black;
+    width: 25rem;
+	overflow: hidden;
+	transition: 500ms;
+ }
+
+ #values-grid .values-submenu ul li {
+	 line-height: 1rem;
+	 font-size: 1.2rem;
+	 margin: 2.5rem 0 0 0;
+ }
+ 
+ #values-grid .values-submenu ul li #close-values-menu { 
+	 display: none;
+ }
+ 
+ #values-grid .values-submenu.active { 
+	height: 100vh;
+ }
+
+ #values-grid .values-submenu.active ul li #open-values-menu { 
+	display: none;
 }
+
+#values-grid .values-submenu.active ul li #close-values-menu { 
+	display: inherit;
+}
+
+ #values-grid .values-submenu ul li span {
+	 float: right;
+ }
+
+ #values-grid .values .value {
+	overflow: hidden;
+	display: none;
+}
+ #values-grid .values .value.active {
+	 display: inherit;
+ }
 
 .big-picture{
 	grid-area:bigpic;
