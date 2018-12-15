@@ -52,7 +52,7 @@
 </div>
 <?php include('includes/menu.php'); ?>
 <?php include('includes/values.php'); ?>
-<?php include('includes/portfolio.php'); ?>	
+<?php include('includes/portfolio_home.php'); ?>	
 <script>
 	jQuery(document).ready(function(){
 		jQuery('#icon-menu').click(function(){
