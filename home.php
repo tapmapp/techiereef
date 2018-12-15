@@ -51,7 +51,8 @@
 	</div>
 </div>
 <?php include('includes/menu.php'); ?>
-<?php include('includes/values.php'); ?>	
+<?php include('includes/values.php'); ?>
+<?php include('includes/portfolio.php'); ?>	
 <script>
 	jQuery(document).ready(function(){
 		jQuery('#icon-menu').click(function(){
