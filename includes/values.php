@@ -5,7 +5,7 @@
             foreach($values as $value) { 
             
         ?>  
-            <div class="value <?php if($counter == 0) { echo 'active'; } ?>">
+            <div id="<?php echo $value->postId ?>" class="value <?php if($counter == 0) { echo 'active'; } ?>">
                 <h1 id="#header"><?php echo $value->header ?></h1>
                 <div class="hope-definition">
                     <p>
@@ -22,8 +22,8 @@
                 </div>
                 <div class="values-navigation">
                     <ul>
-                        <li><span id="backwards"><</span></li>
-                        <li><span id="forward">></span></li>
+                        <li><span class="backwards" data-postId="<?php echo $value->postId ?>"><</span></li>
+                        <li><span class="forwards" data-postId="<?php echo $value->postId ?>">></span></li>
                     </ul>
                 </div>
             </div>
@@ -36,11 +36,20 @@
     </div>
     <div class="values-img">
         <div class="values-submenu">
+            <span id="open-values-menu">+</span>
+            <span id="close-values-menu">-</span>
             <ul>
-                <li>do you have hope? <span id="open-values-menu">+</span><span id="close-values-menu">-</span></li>
-                <li>can you imagine?</li>
-                <li>belief?</li>
-                <li>create</li>
+            
+            <?php 
+
+            $counter = 0;
+            foreach($values as $value) { 
+            
+            ?> 
+                <li <?php if($counter == 0) { echo 'class="active"'; } ?>>
+                    <?php echo $value->header; ?>
+                </li>
+            <?php $counter++; } ?>
             </ul>
         </div>
     </div>

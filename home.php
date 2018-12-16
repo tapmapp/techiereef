@@ -52,8 +52,8 @@
 
 	$value = new Value();
 	$value->postId = 3;
-	$value->header = "create";
-	$value->title = "create";
+	$value->header = "then visualize";
+	$value->title = "visualize";
 	$value->type = "noun";
 	$value->sound = "həʊp";
 	$value->description = '4. a feeling of expectation and desire for a particular thing to happen';
@@ -127,32 +127,51 @@
 			closeValuesMenu();
 		});
 
+		jQuery('.forwards').click(function() {
+			var postId = jQuery(this).attr('data-postId');
+			var nextPost = parseInt(postId) + 1;			
+			if(jQuery('#' + nextPost)[0]) {
+				jQuery('#' + postId).removeClass('active');
+				jQuery('#' + nextPost).addClass('active');
+			}
+		});
+
+		jQuery('.backwards').click(function() {
+			var postId = jQuery(this).attr('data-postId');
+			var previousPost = parseInt(postId) - 1;
+			if(jQuery('#' + previousPost)[0]) {
+				jQuery('#' + postId).removeClass('active');
+				jQuery('#' + previousPost).addClass('active');
+			}
+		});
+
 	});
 	
-	function openMenu(){
+	function openMenu() {
 		jQuery('#menu-grid').addClass('active');
 		setTimeout(()=> {
 			jQuery('#menu-grid').addClass('move');
 		});
 	}
 	
-	function closeMenu(){
+	function closeMenu() {
 		jQuery('#menu-grid').removeClass('move');
 			setTimeout(()=> {
 				jQuery('#menu-grid').removeClass('active');
 		}, 500);
 	}
 
-	function openValuesMenu(){
+	function openValuesMenu() {
 		jQuery('.values-submenu').addClass('active');
 	}
 
-	function closeValuesMenu(){
+	function closeValuesMenu() {
 		jQuery('.values-submenu').removeClass('active');
 	}
+
 	<?php
-	$js_array = json_encode($values);
-	echo "var values = ". $js_array . ";\n";
+		$js_array = json_encode($values);
+		echo "var values = ". $js_array . ";\n";
 	?>
 
 </script>			
